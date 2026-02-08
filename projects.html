@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Dario Serrano</title>
+  <meta name="description" content="Engineering and AI projects by Dario Serrano." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+  <header class="wrap header">
+    <div class="brand">
+      <div class="name">Projects</div>
+      <div class="tag">Deep, quantified write-ups. No fluff.</div>
+    </div>
+    <nav class="nav">
+      <a class="link" href="index.html">Home</a>
+      <a class="link" href="projects.html">Projects</a>
+      <a class="link" href="assets/Dario_Serrano_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a class="link" href="https://linkedin.com/in/darioserrano1213" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section id="docking" class="card">
+      <h1>Androgynous Spacecraft Docking Mechanism</h1>
+      <p class="muted">Kinematics & Dynamics of Machines • Sep–Dec 2025</p>
+
+      <div class="two">
+        <div>
+          <h3>What I built</h3>
+          <ul>
+            <li>Parametric CAD of a 6-arm variable-angle rough-alignment docking interface</li>
+            <li>MATLAB kinematic + static analysis to compute cone half-angle vs slider travel (0.40–0.45 m)</li>
+            <li>6×6 equilibrium solve for joint reactions under a 6 kN axial docking load (1000 N per arm)</li>
+            <li>Jacobian-based force mapping for actuator loads (Stewart-platform style)</li>
+          </ul>
+
+          <h3>Key results</h3>
+          <ul>
+            <li>Docking axial load case: <strong>6 kN</strong></li>
+            <li>Required slider actuator force: <strong>≈ 2.17 kN</strong></li>
+          </ul>
+
+          <p class="muted small">
+            Add: CAD renders + MATLAB plots/screenshots here when you have them.
+          </p>
+        </div>
+
+        <div class="media">
+          <div class="placeholder">Drop an image at <code>assets/img/docking.jpg</code> and replace this box.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="eeg" class="card">
+      <h1>EEG Seizure Detection with CNN–LSTM</h1>
+      <p class="muted">Applied Fundamentals of Deep Learning • May–Sep 2025</p>
+
+      <h3>What I built</h3>
+      <ul>
+        <li>PyTorch CNN–LSTM classifier for CHB-MIT EEG seizure data</li>
+        <li>Preprocessing: Butterworth filtering, wavelet denoising, sliding-window segmentation</li>
+        <li>Evaluation focused on generalization to unseen data</li>
+      </ul>
+
+      <h3>Results</h3>
+      <ul>
+        <li>AUROC: <strong>0.96</strong></li>
+        <li>F1-score: <strong>0.84</strong></li>
+      </ul>
+
+      <p class="muted small">
+        Add: architecture diagram + confusion matrix + link to repo (if public).
+      </p>
+    </section>
+
+    <section id="cnc" class="card">
+      <h1>CNC Mill Design Project</h1>
+      <p class="muted">Mechanical Engineering Design • Sep–Dec 2024</p>
+      <ul>
+        <li>Designed a functional hobbyist CNC mill in SolidWorks</li>
+        <li>Ran cost–performance trade study and manufacturability evaluation</li>
+      </ul>
+      <p class="muted small">Add: assembly render + BOM snapshot + trade study chart.</p>
+    </section>
+
+    <section id="schindler" class="card">
+      <h1>Engineering Internship — Schindler Group</h1>
+      <p class="muted">Shanghai • Jul–Aug 2024</p>
+      <ul>
+        <li>Creo modeling of Ω-Beam and L-Beam components</li>
+        <li>FEA under FKM guidelines</li>
+        <li>MATLAB ODE models for oscillation analysis and simulation validation</li>
+        <li>3D-printed prototypes for rapid iteration</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h1>Publication — Rocket Optimization</h1>
+      <p class="muted">Jun–Oct 2022</p>
+      <p>
+        “Applications of Optimization Techniques for Solid Rocket Design” (Darcy & Roy Press).<br />
+        DOI: <a class="textlink" href="https://doi.org/10.54097/hset.v38i.5936" target="_blank" rel="noopener">10.54097/hset.v38i.5936</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <div class="muted">© <span id="y"></span> Dario Serrano</div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
