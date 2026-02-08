@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dario Serrano | Mechanical + Mechatronics</title>
+  <meta name="description" content="Mechanical Engineering (Mechatronics) student at UofT. Mechanical design, MATLAB modeling, and applied AI." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+  <header class="wrap header">
+    <div class="brand">
+      <div class="name">Dario Serrano</div>
+      <div class="tag">Mechanical Engineering (Mechatronics) • UofT • MATLAB • SolidWorks • PyTorch</div>
+    </div>
+    <nav class="nav">
+      <a class="link" href="index.html">Home</a>
+      <a class="link" href="projects.html">Projects</a>
+      <a class="link" href="assets/Dario_Serrano_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a class="link" href="https://linkedin.com/in/darioserrano1213" target="_blank" rel="noopener">LinkedIn</a>
+      <!-- Add GitHub link if you want: -->
+      <!-- <a class="link" href="https://github.com/YOURUSERNAME" target="_blank" rel="noopener">GitHub</a> -->
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero card">
+      <h1>Mechanical + Mechatronics engineer who builds real systems and proves them with analysis.</h1>
+      <p class="muted">
+        I design mechanical mechanisms (CAD + FEA + manufacturing) and build computational models (MATLAB / Python),
+        with applied AI experience in signal classification.
+      </p>
+
+      <div class="cta">
+        <a class="btn" href="projects.html">View Projects</a>
+        <a class="btn ghost" href="assets/Dario_Serrano_Resume.pdf" target="_blank" rel="noopener">Open Resume (PDF)</a>
+      </div>
+
+      <div class="meta">
+        <span class="pill">Toronto • Open to U.S. roles</span>
+        <span class="pill">Authorized: U.S. • EU • Canada</span>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Flagship</h2>
+        <p><strong>Androgynous Spacecraft Docking Mechanism</strong></p>
+        <p class="muted">Parametric CAD + MATLAB kinematics/statics, 6 kN load case, equilibrium + Jacobian force mapping.</p>
+        <a class="textlink" href="projects.html#docking">See details →</a>
+      </article>
+
+      <article class="card">
+        <h2>AI Project</h2>
+        <p><strong>EEG Seizure Detection (CNN–LSTM)</strong></p>
+        <p class="muted">PyTorch pipeline with filtering/denoising/windowing. Reported AUROC 0.96, F1 0.84.</p>
+        <a class="textlink" href="projects.html#eeg">See details →</a>
+      </article>
+
+      <article class="card">
+        <h2>Industry</h2>
+        <p><strong>Schindler Internship</strong></p>
+        <p class="muted">Creo modeling, FEA under FKM guidelines, MATLAB ODE vibration modeling, prototyping.</p>
+        <a class="textlink" href="projects.html#schindler">See details →</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <div class="muted">© <span id="y"></span> Dario Serrano</div>
+    <div class="muted">dario.serrano@mail.utoronto.ca • +1 (416) 459-3669</div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
