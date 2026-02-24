@@ -129,6 +129,102 @@ body{
   max-height:260px;
   object-fit:cover;
   border-radius:10px;
+  cursor:pointer;
+  transition:transform 140ms ease, box-shadow 140ms ease;
+}
+.media.gallery img:hover{
+  transform:scale(1.04);
+  box-shadow: 0 12px 24px rgba(77,163,255,.25);
+}
+
+/* Make all images clickable */
+.media img{
+  cursor:pointer;
+  transition:transform 140ms ease, box-shadow 140ms ease;
+}
+.media img:hover{
+  transform:scale(1.02);
+  box-shadow: 0 12px 28px rgba(77,163,255,.3);
+}
+
+/* Lightbox modal */
+.lightbox{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(11,13,16,.96);
+  backdrop-filter: blur(8px);
+  z-index:1000;
+  align-items:center;
+  justify-content:center;
+}
+.lightbox.active{
+  display:flex;
+}
+.lightbox-content{
+  position:relative;
+  max-width:90vw;
+  max-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.lightbox-image{
+  max-width:90vw;
+  max-height:85vh;
+  border-radius:16px;
+  box-shadow: var(--shadow);
+  object-fit:contain;
+}
+.lightbox-close{
+  position:absolute;
+  top:20px;
+  right:30px;
+  font-size:32px;
+  font-weight:300;
+  color:var(--text);
+  cursor:pointer;
+  background:none;
+  border:none;
+  padding:0;
+  width:40px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:8px;
+  transition:background 140ms ease, color 140ms ease;
+}
+.lightbox-close:hover{
+  background:rgba(34,42,51,.7);
+  color:var(--accent);
+}
+.lightbox-prev, .lightbox-next{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:28px;
+  color:var(--text);
+  cursor:pointer;
+  background:rgba(34,42,51,.5);
+  border:none;
+  padding:16px 20px;
+  border-radius:10px;
+  transition:background 140ms ease;
+  font-weight:300;
+}
+.lightbox-prev:hover, .lightbox-next:hover{
+  background:rgba(34,42,51,.8);
+  color:var(--accent);
+}
+.lightbox-prev{
+  left:20px;
+}
+.lightbox-next{
+  right:20px;
 }
 
 /* Prevent images from pushing text in two-column rows */

@@ -46,8 +46,13 @@
           
         </div>
 
-        <div class="media">
-          <img src="assets/img/docking/Screenshot%202026-02-09%20165904.png" alt="Docking renders" />
+        <div class="media gallery">
+          <img src="assets/img/docking/Screenshot%202026-02-09%20165904.png" alt="Docking mechanism render 1" />
+          <img src="assets/img/docking/Screenshot%202026-02-09%20170034.png" alt="Docking mechanism render 2" />
+          <img src="assets/img/docking/Screenshot%202026-02-09%20170102.png" alt="Docking mechanism render 3" />
+          <img src="assets/img/docking/Screenshot%202026-02-09%20170133.png" alt="Docking mechanism render 4" />
+          <img src="assets/img/docking/Screenshot%202026-02-09%20170201.png" alt="Docking mechanism render 5" />
+          <img src="assets/img/docking/Screenshot%202026-02-09%20170259.png" alt="Docking mechanism render 6" />
         </div>
       </div>
     </section>
@@ -70,8 +75,11 @@
       </ul>
 
       
-      <div class="media">
-        <img src="assets/img/eeg/Screenshot%202026-02-09%20172620.png" alt="EEG architecture / results" />
+<div class="media gallery">
+        <img src="assets/img/eeg/Screenshot%202026-02-09%20172620.png" alt="EEG CNN-LSTM architecture" />
+        <img src="assets/img/eeg/Screenshot%202026-02-09%20172654.png" alt="EEG preprocessing pipeline" />
+        <img src="assets/img/eeg/Screenshot%202026-02-09%20172842.png" alt="EEG training results" />
+        <img src="assets/img/eeg/Screenshot%202026-02-09%20173032.png" alt="EEG performance metrics" />
       </div>
     </section>
 
@@ -112,8 +120,69 @@
   </main>
 
   <footer class="wrap footer">
-    <div class="muted">© <span id="y"></span> Dario Serrano</div>
-  </footer>
+   !-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+      <button class="lightbox-prev" onclick="prevImage()">&lt;</button>
+      <img id="lightbox-image" class="lightbox-image" alt="" />
+      <button class="lightbox-next" onclick="nextImage()">&gt;</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    let currentImageIndex = 0;
+    let allImages = [];
+
+    // Initialize lightbox with all clickable images
+    function initLightbox() {
+      allImages = Array.from(document.querySelectorAll('.media img'));
+      allImages.forEach((img, index) => {
+        img.addEventListener('click', () => openLightbox(index));
+      });
+      
+      // Close lightbox on background click
+      document.getElementById('lightbox').addEventListener('click', (e) => {
+        if(e.target.id === 'lightbox') closeLightbox();
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if(document.getElementById('lightbox').classList.contains('active')) {
+          if(e.key === 'ArrowLeft') prevImage();
+          if(e.key === 'ArrowRight') nextImage();
+          if(e.key === 'Escape') closeLightbox();
+        }
+      });
+    }
+
+    function openLightbox(index) {
+      currentImageIndex = index;
+      const img = allImages[index];
+      document.getElementById('lightbox-image').src = img.src;
+      document.getElementById('lightbox-image').alt = img.alt;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % allImages.length;
+      openLightbox(currentImageIndex);
+    }
+
+    function prevImage() {
+      currentImageIndex = (currentImageIndex - 1 + allImages.length) % allImages.length;
+      openLightbox(currentImageIndex);
+    }
+
+    initLightbox
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
