@@ -103,6 +103,36 @@ body{
   color:var(--muted);
   background: rgba(11,13,16,.25);
 }
+/* Project images: keep them constrained and professional */
+.media img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:520px;
+  max-height:420px;
+  border-radius:12px;
+  object-fit:cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,.45);
+  border:1px solid rgba(34,42,51,.6);
+}
+
+/* Gallery layout for multiple images */
+.media.gallery{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap:10px;
+  align-items:stretch;
+}
+.media.gallery img{
+  width:100%;
+  height:160px;
+  max-height:260px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* Prevent images from pushing text in two-column rows */
+.two{align-items:center}
 code{font-family:var(--mono); font-size:.95em; color:#d6e7ff;}
 ul{margin-top:8px}
 .footer{padding-top:10px; padding-bottom:28px; border-top:1px solid rgba(34,42,51,.6); margin-top:28px}
