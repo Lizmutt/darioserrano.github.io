@@ -120,72 +120,42 @@
   </main>
 
   <footer class="wrap footer">
-   !-- Lightbox Modal -->
-  <div id="lightbox" class="lightbox">
-    <div class="lightbox-content">
-      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-      <button class="lightbox-prev" onclick="prevImage()">&lt;</button>
-      <img id="lightbox-image" class="lightbox-image" alt="" />
-      <button class="lightbox-next" onclick="nextImage()">&gt;</button>
-    </div>
-  </div>
+    <div class="muted">© <span id="y"></span> Dario Serrano</div>
+  </footer>
+
+  <!-- Expanded image overlay -->
+  <div id="imageOverlay" class="image-overlay"></div>
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
 
-    let currentImageIndex = 0;
-    let allImages = [];
+    // Make all images clickable to expand
+    document.querySelectorAll('.media img').forEach(img => {
+      img.addEventListener('click', function(e) {
+        e.stopPropagation();
+        expandImage(this);
+      });
+    });
 
-    // Initialize lightbox with all clickable images
-    function initLightbox() {
-      allImages = Array.from(document.querySelectorAll('.media img'));
-      allImages.forEach((img, index) => {
-        img.addEventListener('click', () => openLightbox(index));
+    function expandImage(imgElement) {
+      const overlay = document.getElementById('imageOverlay');
+      overlay.innerHTML = `<img src="${imgElement.src}" alt="${imgElement.alt}" class="expanded-image" />`;
+      overlay.classList.add('active');
+      
+      // Close on background click
+      overlay.addEventListener('click', function(e) {
+        if(e.target === overlay) {
+          overlay.classList.remove('active');
+        }
       });
       
-      // Close lightbox on background click
-      document.getElementById('lightbox').addEventListener('click', (e) => {
-        if(e.target.id === 'lightbox') closeLightbox();
-      });
-
-      // Keyboard navigation
-      document.addEventListener('keydown', (e) => {
-        if(document.getElementById('lightbox').classList.contains('active')) {
-          if(e.key === 'ArrowLeft') prevImage();
-          if(e.key === 'ArrowRight') nextImage();
-          if(e.key === 'Escape') closeLightbox();
+      // Close on Escape
+      document.addEventListener('keydown', function(e) {
+        if(e.key === 'Escape' && overlay.classList.contains('active')) {
+          overlay.classList.remove('active');
         }
       });
     }
-
-    function openLightbox(index) {
-      currentImageIndex = index;
-      const img = allImages[index];
-      document.getElementById('lightbox-image').src = img.src;
-      document.getElementById('lightbox-image').alt = img.alt;
-      document.getElementById('lightbox').classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    function nextImage() {
-      currentImageIndex = (currentImageIndex + 1) % allImages.length;
-      openLightbox(currentImageIndex);
-    }
-
-    function prevImage() {
-      currentImageIndex = (currentImageIndex - 1 + allImages.length) % allImages.length;
-      openLightbox(currentImageIndex);
-    }
-
-    initLightbox
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
