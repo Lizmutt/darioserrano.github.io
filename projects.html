@@ -5,46 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects | Dario Serrano</title>
   <meta name="description" content="Engineering and AI projects by Dario Serrano." />
+  <meta property="og:title" content="Projects | Dario Serrano" />
+  <meta property="og:description" content="Mechanical design, deep learning, PCB, and industry projects by Dario Serrano — UofT Mechanical Engineering." />
+  <meta property="og:type" content="website" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
   <header class="wrap header">
     <div class="brand">
-      <div class="name">Projects</div>
-  
+      <div class="name">Dario Serrano</div>
+      <div class="tag">Mechanical Engineering (Robotics and Mechatronics) &bull; UofT</div>
     </div>
     <nav class="nav">
       <a class="link" href="index.html">Home</a>
       <a class="link" href="projects.html">Projects</a>
-        <a class="link" href="assets/pdf/Dario_Serrano_Resume_2026_0218.pdf" target="_blank" rel="noopener">Resume</a>
+      <a class="link" href="assets/pdf/Dario_Serrano_Resume_2026_0218.pdf" target="_blank" rel="noopener">Resume</a>
       <a class="link" href="https://linkedin.com/in/darioserrano1213" target="_blank" rel="noopener">LinkedIn</a>
     </nav>
   </header>
 
   <main class="wrap">
+    <nav class="project-nav">
+      <a class="pill" href="#docking">Docking Mechanism</a>
+      <a class="pill" href="#eeg">EEG Detection</a>
+      <a class="pill" href="#pcb">PCB</a>
+      <a class="pill" href="#cnc">CNC Mill</a>
+      <a class="pill" href="#schindler">Schindler</a>
+      <a class="pill" href="#publication">Publication</a>
+    </nav>
+
     <section id="docking" class="card">
       <h1>Androgynous Spacecraft Docking Mechanism</h1>
-      <p class="muted">Kinematics & Dynamics of Machines • Sep–Dec 2025</p>
+      <p class="muted">Kinematics &amp; Dynamics of Machines &bull; Sep&ndash;Dec 2025</p>
       <p>In a senior-level mechanics course I led the design of a rough-alignment docking interface suitable for small satellite applications. The mechanism needed to be androgynous, compact, and capable of transmitting significant axial forces without jamming. Deliverables included a fully parametric CAD model, MATLAB analysis code, and a detailed final report.</p>
 
       <div class="two">
         <div>
           <h3>What I built</h3>
           <ul>
-            <li>Six‑arm variable‑angle mechanism parametrized in SolidWorks to allow slider travel of 0.40–0.45 m and adjust the docking cone half-angle.</li>
-            <li>MATLAB scripts calculating kinematics and static equilibrium; solved a 6×6 system for joint reactions under a 6 kN axial docking load (≈1000 N per arm).</li>
-            <li>Jacobian-based force mapping to determine Stewart-platform‑style actuator loads and inform actuator selection.</li>
+            <li>Six-arm variable-angle mechanism parametrized in SolidWorks to allow slider travel of 0.40&ndash;0.45 m and adjust the docking cone half-angle.</li>
+            <li>MATLAB scripts calculating kinematics and static equilibrium; solved a 6&times;6 system for joint reactions under a 6 kN axial docking load (&asymp;1000 N per arm).</li>
+            <li>Jacobian-based force mapping to determine Stewart-platform-style actuator loads and inform actuator selection.</li>
             <li>FEA validation and parameter sweeps to ensure robustness across the motion range.</li>
           </ul>
 
           <h3>Key results</h3>
           <ul>
-            <li>Designed to withstand a 6 kN axial load while maintaining alignment tolerances.</li>
-            <li>Calculated required slider actuator force of ≈2.17 kN, guiding motor sizing.</li>
+            <li>Designed to withstand a 6 kN axial load while maintaining alignment tolerances.</li>
+            <li>Calculated required slider actuator force of &asymp;2.17 kN, guiding motor sizing.</li>
           </ul>
-
-          
         </div>
 
         <div class="media gallery">
@@ -59,15 +69,15 @@
     </section>
 
     <section id="eeg" class="card">
-      <h1>EEG Seizure Detection with CNN–LSTM</h1>
-      <p class="muted">Applied Fundamentals of Deep Learning • May–Sep 2025</p>
-      <p>This project tackled seizure classification on pediatric EEG recordings (CHB‑MIT dataset).  The goal was to build a deep learning pipeline that generalizes across patients by emphasizing robust preprocessing and evaluation on data the model had never seen.</p>
+      <h1>EEG Seizure Detection with CNN&ndash;LSTM</h1>
+      <p class="muted">Applied Fundamentals of Deep Learning &bull; May&ndash;Sep 2025</p>
+      <p>This project tackled seizure classification on pediatric EEG recordings (CHB-MIT dataset). The goal was to build a deep learning pipeline that generalizes across patients by emphasizing robust preprocessing and evaluation on data the model had never seen.</p>
 
       <h3>What I built</h3>
       <ul>
-        <li>End-to-end PyTorch CNN–LSTM architecture trained on multi-channel EEG windows.</li>
+        <li>End-to-end PyTorch CNN&ndash;LSTM architecture trained on multi-channel EEG windows.</li>
         <li>Signal preprocessing including a 4th-order Butterworth bandpass filter, wavelet denoising, and overlapping sliding-window segmentation to boost data volume.</li>
-        <li>Training/validation split arranged by patient to measure true generalization; evaluation metrics computed on held‑out subjects.</li>
+        <li>Training/validation split arranged by patient to measure true generalization; evaluation metrics computed on held-out subjects.</li>
       </ul>
 
       <h3>Results</h3>
@@ -76,7 +86,7 @@
         <li>F1-score: <strong>0.84</strong> on unseen patients, indicating balanced precision/recall.</li>
       </ul>
 
-      <p><a class="textlink" href="assets/pdf/APS360_Final_Report.pdf" target="_blank" rel="noopener">Download full project final report →</a></p>
+      <p><a class="textlink" href="assets/pdf/APS360_Final_Report.pdf" target="_blank" rel="noopener">Download full project final report &rarr;</a></p>
 
       <div class="media gallery">
         <img src="assets/img/eeg/Screenshot%202026-02-09%20172620.png" alt="EEG CNN-LSTM architecture" />
@@ -88,25 +98,29 @@
 
     <section id="pcb" class="card">
       <h1>Current Sensing &amp; Anti-Aliasing PCB</h1>
-      <p class="muted">Digital and Analog Circuits • Jan–May 2026</p>
-      <p>Designed and fabricated a two-layer printed circuit board to interface current sensing with high-speed ADC sampling, incorporating analog filtering and anti‑aliasing to support 50–70 kHz measurements.</p>
+      <p class="muted">Digital and Analog Circuits &bull; Jan&ndash;May 2026</p>
+      <p>Designed and fabricated a two-layer printed circuit board to interface current sensing with high-speed ADC sampling, incorporating analog filtering and anti-aliasing to support 50&ndash;70 kHz measurements.</p>
       <ul>
-        <li>Analog front-end using LM324 to map 0–3.5 A current to 0.25–3.3 V ADC range under a 0–19 V single-supply constraint.</li>
-        <li>Third-order Chebyshev low-pass filter (1 kHz cutoff, ≥ 35 dB attenuation at 5 kHz) designed in LTspice; validated DC gain and frequency response.</li>
-        <li>Layout in Eagle with careful power/ground return routing; generated Gerber/drill files and hand‑soldered prototype for validation.</li>
+        <li>Analog front-end using LM324 to map 0&ndash;3.5 A current to 0.25&ndash;3.3 V ADC range under a 0&ndash;19 V single-supply constraint.</li>
+        <li>Third-order Chebyshev low-pass filter (1 kHz cutoff, &ge; 35 dB attenuation at 5 kHz) designed in LTspice; validated DC gain and frequency response.</li>
+        <li>Layout in Eagle with careful power/ground return routing; generated Gerber/drill files and hand-soldered prototype for validation.</li>
       </ul>
+      <div class="media gallery">
+        <img src="assets/img/PCB/Screenshot%202026-02-26%20201752.png" alt="PCB schematic" />
+        <img src="assets/img/PCB/Screenshot%202026-02-26%20201901.png" alt="PCB layout" />
+      </div>
     </section>
 
     <section id="cnc" class="card">
       <h1>CNC Mill Design Project</h1>
-      <p class="muted">Mechanical Engineering Design • Sep–Dec 2024</p>
-      <p>Designed a desktop CNC mill targeting hobbyists, balancing cost, rigidity, and ease of manufacture.  The project delivered full 3D CAD models, component selection rationale, and a detailed cost–performance analysis.</p>
+      <p class="muted">Mechanical Engineering Design &bull; Sep&ndash;Dec 2024</p>
+      <p>Designed a desktop CNC mill targeting hobbyists, balancing cost, rigidity, and ease of manufacture. The project delivered full 3D CAD models, component selection rationale, and a detailed cost&ndash;performance analysis.</p>
       <ul>
         <li>Developed detailed 3D models of frame, linear axes, spindle assembly, and transmission in SolidWorks.</li>
         <li>Performed trade studies on drive options (stepper vs servo), linear guide types, and material choices to optimise accuracy per dollar.</li>
         <li>Documented fabrication processes, estimated BOM cost, and identified manufacturing challenges for a market-ready design.</li>
       </ul>
-      <p><a class="textlink" href="assets/pdf/MIE243 Final Report .pdf" target="_blank" rel="noopener">View project final report →</a></p>
+      <p><a class="textlink" href="assets/pdf/MIE243 Final Report .pdf" target="_blank" rel="noopener">View project final report &rarr;</a></p>
       <div class="media gallery">
         <img src="assets/img/CNC/CNC%20CAD.png" alt="CNC CAD" />
         <img src="assets/img/CNC/Component%20selection.png" alt="Component selection" />
@@ -116,29 +130,29 @@
     </section>
 
     <section id="schindler" class="card">
-      <h1>Engineering Internship — Schindler Group</h1>
-      <p class="muted">Shanghai • Jul–Aug 2024</p>
+      <h1>Engineering Internship &mdash; Schindler Group</h1>
+      <p class="muted">Shanghai &bull; Jul&ndash;Aug 2024</p>
       <p>During a summer internship with Schindler's global R&amp;D team I assisted in structural analysis and prototyping for elevator components in an international setting.</p>
       <ul>
-        <li>Parametric Creo modeling of Ω-Beam and L-Beam structural parts in collaboration with the worldwide R&amp;D group.</li>
+        <li>Parametric Creo modeling of &Omega;-Beam and L-Beam structural parts in collaboration with the worldwide R&amp;D group.</li>
         <li>Finite element analysis performed according to FKM guidelines to verify strength under service loads.</li>
         <li>Developed MATLAB ODE models to analyze system oscillations and compare with simulation results.</li>
         <li>Produced 3D-printed prototypes for quick design iteration and evaluation on industrial printers.</li>
       </ul>
     </section>
 
-    <section class="card">
-      <h1>Publication — Rocket Optimization</h1>
-      <p class="muted">Jun–Oct 2022</p>
+    <section id="publication" class="card">
+      <h1>Publication &mdash; Rocket Optimization</h1>
+      <p class="muted">Jun&ndash;Oct 2022</p>
       <p>
-        “Applications of Optimization Techniques for Solid Rocket Design” (Darcy & Roy Press).<br />
+        "Applications of Optimization Techniques for Solid Rocket Design" (Darcy &amp; Roy Press).<br />
         DOI: <a class="textlink" href="https://doi.org/10.54097/hset.v38i.5936" target="_blank" rel="noopener">10.54097/hset.v38i.5936</a>
       </p>
     </section>
   </main>
 
   <footer class="wrap footer">
-    <div class="muted">© <span id="y"></span> Dario Serrano</div>
+    <div class="muted">&copy; <span id="y"></span> Dario Serrano</div>
   </footer>
 
   <!-- Expanded image overlay -->
@@ -159,14 +173,14 @@
       const overlay = document.getElementById('imageOverlay');
       overlay.innerHTML = `<img src="${imgElement.src}" alt="${imgElement.alt}" class="expanded-image" />`;
       overlay.classList.add('active');
-      
+
       // Close on background click
       overlay.addEventListener('click', function(e) {
         if(e.target === overlay) {
           overlay.classList.remove('active');
         }
       });
-      
+
       // Close on Escape
       document.addEventListener('keydown', function(e) {
         if(e.key === 'Escape' && overlay.classList.contains('active')) {
