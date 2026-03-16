@@ -1,0 +1,111 @@
+\documentclass[10pt,letterpaper]{article}
+
+% --- Simple, compact setup ---
+\usepackage[letterpaper,margin=0.41in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{textgreek}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8pt}
+\setstretch{1.00}
+
+% Compact bullets (slightly tighter than before to fit 1 page with new section)
+\newlist{tightitem}{itemize}{1}
+\setlist[tightitem]{label=\textbullet,leftmargin=*,itemsep=0.5pt,topsep=0.5pt,parsep=0pt,partopsep=0pt}
+
+% Section header macro (slightly tighter)
+\newcommand{\sectionhead}[1]{\vspace{3pt}\textbf{\large #1}\vspace{1pt}\hrule\vspace{2pt}}
+
+\begin{document}
+
+% ===== Header =====
+{\LARGE \textbf{Dario Serrano}} \\
+Toronto, Canada — +1 (416) 459-3669 — \href{mailto:dario.serrano@mail.utoronto.ca}{dario.serrano@mail.utoronto.ca} — \href{https://linkedin.com/in/darioserrano1213}
+{linkedin.com/in/darioserrano1213} \\
+Portfolio: 
+\href{https://lizmutt.github.io/darioserrano.github.io/}
+{lizmutt.github.io/darioserrano.github.io/}\\
+Authorized to work in the U.S. (Citizen), EU (Citizen) and Canada (Work Permit)
+
+% ===== Profile =====
+\sectionhead{PROFILE}
+Mechanical Engineering student at the University of Toronto with experience in mechanical design (SolidWorks, Eagle PCB, ANSYS, Creo, MATLAB) and applied AI (PyTorch). Seeking a 12--16 month co-op/internship (2026) in Mechanical/Mechatronics Engineering, with strong interest in AI-driven systems and analytical modeling.
+
+% ===== Education =====
+\sectionhead{EDUCATION}
+\textbf{University of Toronto}, Toronto, ON \hfill 2023--2027 \\
+B.A.Sc. Mechanical Engineering + PEY Co-op \\
+Minor: Robotics \& Mechatronics — Certificates: Engineering Business, AI Engineering \\
+Teams: U of T Baja Racing (Suspension) — U of T Racing (Chassis Design)\\
+High school distinctions: International Math Modeling Competiton (IMMC) top 3 percent, Physics Bowl National Gold
+
+% ===== Engineering Experience =====
+\sectionhead{ENGINEERING EXPERIENCE}
+\textbf{Engineering Intern — Schindler Group} \hfill Jul--Aug 2024 \\
+Shanghai, China
+\begin{tightitem}
+  \item Modeled elevator structural components $\Omega$-Beam and L-Beam parts in Creo parametric with main worldwide R\&D team; performed FEA analysis under FKM guidelines.
+  \item Built basic MATLAB ODE models to analyze oscillations and validate simulation accuracy.
+  \item 3D-printed lift solution prototypes on industrial systems for rapid iteration.
+\end{tightitem}
+
+\textbf{Androgynous Spacecraft Docking Mechanism — Kinematics and Dynamics of Machines} \hfill Sep--Dec 2025 \\
+Toronto, ON
+\begin{tightitem}
+  \item Built a parametric CAD model of a 6-arm variable-angle rough-alignment mechanism for a microsatellite docking interface.
+  \item Wrote MATLAB kinematic and static analysis code to compute docking cone half-angle over 0.40--0.45 m slider travel and resolve forces under a 6 kN axial docking load (1000 N per arm).
+  \item Solved a 6$\times$6 equilibrium system to compute joint reactions and required slider actuator force $\approx$ 2.17 kN, and implemented Jacobian-based force mapping for Stewart-platform actuator loads.
+\end{tightitem}
+
+\textbf{Current Sensing \& Anti-Aliasing PCB — Digital and Analog Circuits} \hfill Jan--May 2026\\
+Toronto, ON
+\begin{tightitem}
+  \item Designed an analog current-sensing system mapping 0--3.5A to 0.25--3.3V ADC range using LM324 under 0--19V single-supply constraints; validated DC sweep and gain scaling in LTspice.
+  \item Designed a 3rd-order Chebyshev low-pass filter (1kHz cutoff, $\geq$35dB at 5kHz) to mitigate aliasing for 50--70kHz ADC sampling; selected standard 5\%/10\% RC values.
+  \item Created a 2-layer PCB in EAGLE with controlled routing of power/ground returns; generated Gerber/drill files and fabricated + hand-soldered board for validation.
+\end{tightitem}
+
+\textbf{Baja SAE Racing — University of Toronto Baja Racing Team (Suspension)} \hfill Sep 2025--Present \\
+Toronto, ON
+\begin{tightitem}
+  \item Contributing to the revival of UofT's Baja SAE program after 6 years of inactivity; preparing an off-road buggy for the June 2026 SAE Baja competition.
+  \item Performing hands-on MIG/TIG welding and manual machining of suspension and chassis components to competition-ready tolerances.
+  \item Designing original suspension components and tubular frame assemblies in SolidWorks; integrating purchased off-the-shelf parts and components sourced from other university teams into the vehicle architecture.
+\end{tightitem}
+
+\textbf{CNC Mill Design Project — Mechanical Engineering Design} \hfill Sep--Dec 2024 \\
+Toronto, ON
+\begin{tightitem}
+  \item Designed a functional market ready CNC mill in SolidWorks targeting hobbyist users.
+  \item Ran cost--performance analysis and evaluated design candidates for manufacturability.
+\end{tightitem}
+
+% ===== AI & Analytical Projects =====
+\sectionhead{AI \& ANALYTICAL PROJECTS}
+\textbf{Seizure Detection with CNN--LSTM — Applied Fundamentals of Deep Learning} \hfill May--Sep 2025 \\
+Toronto, ON
+\begin{tightitem}
+  \item Built a CNN--LSTM model in PyTorch to classify EEG seizure data (CHB-MIT dataset from a Boston pediatric hospital) for seizure prediction.
+  \item Implemented preprocessing: Butterworth filtering, wavelet denoising, sliding-window segmentation.
+  \item Achieved AUROC 0.96 and F1-score 0.84; strong generalization on unseen data.
+\end{tightitem}
+
+\textbf{Research on Rocket Optimization} \hfill Jun--Oct 2022 \\
+Remote
+\begin{tightitem}
+  \item Published ``Applications of Optimization Techniques for Solid Rocket Design'' (Darcy \& Roy Press).
+  \item Applied numerical optimization for propulsion performance. DOI: 10.54097/hset.v38i.5936
+\end{tightitem}
+
+% ===== Skills =====
+\sectionhead{TECHNICAL SKILLS}
+Design \& Fabrication: SolidWorks, Creo, ANSYS, 3D Printing, Machining, MIG/TIG Welding \\
+Programming: Python, PyTorch, MATLAB, NumPy, pandas, SciPy \\
+Other: Microsoft Office, Minitab \quad Languages (Native Speaker): English, Mandarin, Shanghainese
+
+\vspace{2pt}
+Reference: Available upon request from Daryoush Ziai, CEO — Schindler Asia Pacific.
+
+\end{document}
