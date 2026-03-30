@@ -14,47 +14,76 @@
 <body>
   <header class="wrap header">
     <div class="brand">
-      <div class="name">Dario Serrano</div>
-      <div class="tag">Mechanical Engineering (Robotics and Mechatronics) &bull; UofT</div>
+      <div class="name"
+           data-en="Dario Serrano"
+           data-zh="王东瑞（Dario Serrano）">Dario Serrano</div>
+      <div class="tag"
+           data-en="Mechanical Engineering (Robotics and Mechatronics) &bull; UofT"
+           data-zh="机械工程（机器人与机电一体化）&bull; 多伦多大学">Mechanical Engineering (Robotics and Mechatronics) &bull; UofT</div>
     </div>
     <nav class="nav">
-      <a class="link" href="index.html">Home</a>
-      <a class="link" href="projects.html">Projects</a>
-      <a class="link" href="assets/pdf/Dario_Serrano_Resume_2026_0315.pdf" target="_blank" rel="noopener">Resume</a>
+      <a class="link" href="index.html"
+         data-en="Home" data-zh="主页">Home</a>
+      <a class="link" href="projects.html"
+         data-en="Projects" data-zh="项目">Projects</a>
+      <a class="link"
+         href="assets/pdf/Dario_Serrano_Resume_2026_0315.pdf"
+         data-href-en="assets/pdf/Dario_Serrano_Resume_2026_0315.pdf"
+         data-href-zh="assets/pdf/Dario_Serrano_Resume_CHINESE_0315.pdf"
+         data-en="Resume" data-zh="简历"
+         target="_blank" rel="noopener">Resume</a>
       <a class="link" href="https://linkedin.com/in/darioserrano1213" target="_blank" rel="noopener">LinkedIn</a>
+      <button class="lang-toggle" id="lang-btn" onclick="toggleLang()">中文</button>
     </nav>
   </header>
 
   <main class="wrap">
     <nav class="project-nav">
-      <a class="pill" href="#docking">Docking Mechanism</a>
-      <a class="pill" href="#eeg">EEG Detection</a>
+      <a class="pill" href="#docking"
+         data-en="Docking Mechanism" data-zh="对接机构">Docking Mechanism</a>
+      <a class="pill" href="#eeg"
+         data-en="EEG Detection" data-zh="脑电检测">EEG Detection</a>
       <a class="pill" href="#pcb">PCB</a>
-      <a class="pill" href="#cnc">CNC Mill</a>
-      <a class="pill" href="#baja">Baja Racing</a>
-      <a class="pill" href="#schindler">Schindler</a>
-      <a class="pill" href="#publication">Publication</a>
+      <a class="pill" href="#cnc"
+         data-en="CNC Mill" data-zh="数控铣床">CNC Mill</a>
+      <a class="pill" href="#baja"
+         data-en="Baja Racing" data-zh="Baja赛车">Baja Racing</a>
+      <a class="pill" href="#schindler"
+         data-en="Schindler" data-zh="迅达实习">Schindler</a>
+      <a class="pill" href="#publication"
+         data-en="Publication" data-zh="发表论文">Publication</a>
     </nav>
 
+    <!-- ── DOCKING ── -->
     <section id="docking" class="card">
-      <h1>Androgynous Spacecraft Docking Mechanism</h1>
-      <p class="muted">Kinematics &amp; Dynamics of Machines &bull; Sep&ndash;Dec 2025</p>
-      <p>In a senior-level mechanics course I led the design of a rough-alignment docking interface suitable for small satellite applications. The mechanism needed to be androgynous, compact, and capable of transmitting significant axial forces without jamming. Deliverables included a fully parametric CAD model, MATLAB analysis code, and a detailed final report.</p>
+      <h1 data-en="Androgynous Spacecraft Docking Mechanism"
+          data-zh="雌雄同构航天器对接机构">Androgynous Spacecraft Docking Mechanism</h1>
+      <p class="muted"
+         data-en="Kinematics &amp; Dynamics of Machines &bull; Sep&ndash;Dec 2025"
+         data-zh="机械运动学与动力学 &bull; 2025年9月–12月">Kinematics &amp; Dynamics of Machines &bull; Sep&ndash;Dec 2025</p>
+      <p data-en="In a senior-level mechanics course I led the design of a rough-alignment docking interface suitable for small satellite applications. The mechanism needed to be androgynous, compact, and capable of transmitting significant axial forces without jamming. Deliverables included a fully parametric CAD model, MATLAB analysis code, and a detailed final report."
+         data-zh="在高年级力学课程中，我主导设计了适用于小型卫星对接任务的粗对准接口机构，要求雌雄同构、结构紧凑，并能在不卡死的情况下传递较大轴向力。交付成果包括完整参数化CAD模型、MATLAB分析代码及详细报告。">In a senior-level mechanics course I led the design of a rough-alignment docking interface suitable for small satellite applications. The mechanism needed to be androgynous, compact, and capable of transmitting significant axial forces without jamming. Deliverables included a fully parametric CAD model, MATLAB analysis code, and a detailed final report.</p>
 
       <div class="two">
         <div>
-          <h3>What I built</h3>
+          <h3 data-en="What I built" data-zh="设计内容">What I built</h3>
           <ul>
-            <li>Six-arm variable-angle mechanism parametrized in SolidWorks to allow slider travel of 0.40&ndash;0.45 m and adjust the docking cone half-angle.</li>
-            <li>MATLAB scripts calculating kinematics and static equilibrium; solved a 6&times;6 system for joint reactions under a 6 kN axial docking load (&asymp;1000 N per arm).</li>
-            <li>Jacobian-based force mapping to determine Stewart-platform-style actuator loads and inform actuator selection.</li>
-            <li>FEA validation and parameter sweeps to ensure robustness across the motion range.</li>
+            <li data-en="Six-arm variable-angle mechanism parametrized in SolidWorks to allow slider travel of 0.40&ndash;0.45 m and adjust the docking cone half-angle."
+                data-zh="在SolidWorks中对六臂可变角度机构进行参数化建模，支持滑块行程0.40–0.45 m并可调节对接锥半角。">Six-arm variable-angle mechanism parametrized in SolidWorks to allow slider travel of 0.40&ndash;0.45 m and adjust the docking cone half-angle.</li>
+            <li data-en="MATLAB scripts calculating kinematics and static equilibrium; solved a 6&times;6 system for joint reactions under a 6 kN axial docking load (&asymp;1000 N per arm)."
+                data-zh="编写MATLAB运动学与静力学分析脚本，在6 kN轴向对接载荷下（每臂约1000 N）求解6×6关节反力方程。">MATLAB scripts calculating kinematics and static equilibrium; solved a 6&times;6 system for joint reactions under a 6 kN axial docking load (&asymp;1000 N per arm).</li>
+            <li data-en="Jacobian-based force mapping to determine Stewart-platform-style actuator loads and inform actuator selection."
+                data-zh="通过Jacobian力映射确定类Stewart平台的执行器载荷，为驱动器选型提供依据。">Jacobian-based force mapping to determine Stewart-platform-style actuator loads and inform actuator selection.</li>
+            <li data-en="FEA validation and parameter sweeps to ensure robustness across the motion range."
+                data-zh="FEA验证与参数扫描，确保在整个运动范围内结构稳健。">FEA validation and parameter sweeps to ensure robustness across the motion range.</li>
           </ul>
 
-          <h3>Key results</h3>
+          <h3 data-en="Key results" data-zh="主要成果">Key results</h3>
           <ul>
-            <li>Designed to withstand a 6 kN axial load while maintaining alignment tolerances.</li>
-            <li>Calculated required slider actuator force of &asymp;2.17 kN, guiding motor sizing.</li>
+            <li data-en="Designed to withstand a 6 kN axial load while maintaining alignment tolerances."
+                data-zh="机构可承受6 kN轴向载荷，同时满足对准容差要求。">Designed to withstand a 6 kN axial load while maintaining alignment tolerances.</li>
+            <li data-en="Calculated required slider actuator force of &asymp;2.17 kN, guiding motor sizing."
+                data-zh="计算所需滑块驱动力约为2.17 kN，直接指导电机选型。">Calculated required slider actuator force of &asymp;2.17 kN, guiding motor sizing.</li>
           </ul>
         </div>
 
@@ -69,25 +98,37 @@
       </div>
     </section>
 
+    <!-- ── EEG ── -->
     <section id="eeg" class="card">
-      <h1>EEG Seizure Detection with CNN&ndash;LSTM</h1>
-      <p class="muted">Applied Fundamentals of Deep Learning &bull; May&ndash;Sep 2025</p>
-      <p>This project tackled seizure classification on pediatric EEG recordings (CHB-MIT dataset). The goal was to build a deep learning pipeline that generalizes across patients by emphasizing robust preprocessing and evaluation on data the model had never seen.</p>
+      <h1 data-en="EEG Seizure Detection with CNN&ndash;LSTM"
+          data-zh="基于CNN-LSTM的脑电癫痫检测">EEG Seizure Detection with CNN&ndash;LSTM</h1>
+      <p class="muted"
+         data-en="Applied Fundamentals of Deep Learning &bull; May&ndash;Sep 2025"
+         data-zh="深度学习应用基础 &bull; 2025年5月–9月">Applied Fundamentals of Deep Learning &bull; May&ndash;Sep 2025</p>
+      <p data-en="This project tackled seizure classification on pediatric EEG recordings (CHB-MIT dataset). The goal was to build a deep learning pipeline that generalizes across patients by emphasizing robust preprocessing and evaluation on data the model had never seen."
+         data-zh="本项目对小儿脑电（CHB-MIT数据集）进行癫痫发作分类，目标是构建能够跨患者泛化的深度学习流水线，重点在于鲁棒预处理与对模型未见数据的泛化评估。">This project tackled seizure classification on pediatric EEG recordings (CHB-MIT dataset). The goal was to build a deep learning pipeline that generalizes across patients by emphasizing robust preprocessing and evaluation on data the model had never seen.</p>
 
-      <h3>What I built</h3>
+      <h3 data-en="What I built" data-zh="构建内容">What I built</h3>
       <ul>
-        <li>End-to-end PyTorch CNN&ndash;LSTM architecture trained on multi-channel EEG windows.</li>
-        <li>Signal preprocessing including a 4th-order Butterworth bandpass filter, wavelet denoising, and overlapping sliding-window segmentation to boost data volume.</li>
-        <li>Training/validation split arranged by patient to measure true generalization; evaluation metrics computed on held-out subjects.</li>
+        <li data-en="End-to-end PyTorch CNN&ndash;LSTM architecture trained on multi-channel EEG windows."
+            data-zh="基于PyTorch搭建端到端CNN-LSTM网络，输入为多通道EEG滑动窗口。">End-to-end PyTorch CNN&ndash;LSTM architecture trained on multi-channel EEG windows.</li>
+        <li data-en="Signal preprocessing including a 4th-order Butterworth bandpass filter, wavelet denoising, and overlapping sliding-window segmentation to boost data volume."
+            data-zh="信号预处理包括4阶Butterworth带通滤波、小波去噪，以及重叠滑动窗口分割以扩充数据量。">Signal preprocessing including a 4th-order Butterworth bandpass filter, wavelet denoising, and overlapping sliding-window segmentation to boost data volume.</li>
+        <li data-en="Training/validation split arranged by patient to measure true generalization; evaluation metrics computed on held-out subjects."
+            data-zh="按患者划分训练/验证集以衡量真实泛化能力；评估指标在未参与训练的受试者上计算。">Training/validation split arranged by patient to measure true generalization; evaluation metrics computed on held-out subjects.</li>
       </ul>
 
-      <h3>Results</h3>
+      <h3 data-en="Results" data-zh="实验结果">Results</h3>
       <ul>
-        <li>AUROC: <strong>0.96</strong> demonstrating strong discrimination ability.</li>
-        <li>F1-score: <strong>0.84</strong> on unseen patients, indicating balanced precision/recall.</li>
+        <li data-en="AUROC: &lt;strong&gt;0.96&lt;/strong&gt; demonstrating strong discrimination ability."
+            data-zh="AUROC：&lt;strong&gt;0.96&lt;/strong&gt;，分类判别能力强。">AUROC: <strong>0.96</strong> demonstrating strong discrimination ability.</li>
+        <li data-en="F1-score: &lt;strong&gt;0.84&lt;/strong&gt; on unseen patients, indicating balanced precision/recall."
+            data-zh="F1分数：&lt;strong&gt;0.84&lt;/strong&gt;，精确率与召回率均衡。">F1-score: <strong>0.84</strong> on unseen patients, indicating balanced precision/recall.</li>
       </ul>
 
-      <p><a class="textlink" href="assets/pdf/APS360_Final_Report.pdf" target="_blank" rel="noopener">Download full project final report &rarr;</a></p>
+      <p><a class="textlink" href="assets/pdf/APS360_Final_Report.pdf" target="_blank" rel="noopener"
+            data-en="Download full project final report &rarr;"
+            data-zh="下载完整项目报告 &rarr;">Download full project final report &rarr;</a></p>
 
       <div class="media gallery">
         <img src="assets/img/eeg/Screenshot%202026-02-09%20172620.png" alt="EEG CNN-LSTM architecture" />
@@ -97,14 +138,22 @@
       </div>
     </section>
 
+    <!-- ── PCB ── -->
     <section id="pcb" class="card">
-      <h1>Current Sensing &amp; Anti-Aliasing PCB</h1>
-      <p class="muted">Digital and Analog Circuits &bull; Jan&ndash;May 2026</p>
-      <p>Designed and fabricated a two-layer printed circuit board to interface current sensing with high-speed ADC sampling, incorporating analog filtering and anti-aliasing to support 50&ndash;70 kHz measurements.</p>
+      <h1 data-en="Current Sensing &amp; Anti-Aliasing PCB"
+          data-zh="电流检测与抗混叠PCB">Current Sensing &amp; Anti-Aliasing PCB</h1>
+      <p class="muted"
+         data-en="Digital and Analog Circuits &bull; Jan&ndash;May 2026"
+         data-zh="数字与模拟电路 &bull; 2026年1月–5月">Digital and Analog Circuits &bull; Jan&ndash;May 2026</p>
+      <p data-en="Designed and fabricated a two-layer printed circuit board to interface current sensing with high-speed ADC sampling, incorporating analog filtering and anti-aliasing to support 50&ndash;70 kHz measurements."
+         data-zh="设计并制作双层PCB，用于电流检测与高速ADC采样接口，集成模拟滤波与抗混叠功能，支持50–70 kHz测量。">Designed and fabricated a two-layer printed circuit board to interface current sensing with high-speed ADC sampling, incorporating analog filtering and anti-aliasing to support 50&ndash;70 kHz measurements.</p>
       <ul>
-        <li>Analog front-end using LM324 to map 0&ndash;3.5 A current to 0.25&ndash;3.3 V ADC range under a 0&ndash;19 V single-supply constraint.</li>
-        <li>Third-order Chebyshev low-pass filter (1 kHz cutoff, &ge; 35 dB attenuation at 5 kHz) designed in LTspice; validated DC gain and frequency response.</li>
-        <li>Layout in Eagle with careful power/ground return routing; generated Gerber/drill files and hand-soldered prototype for validation.</li>
+        <li data-en="Analog front-end using LM324 to map 0&ndash;3.5 A current to 0.25&ndash;3.3 V ADC range under a 0&ndash;19 V single-supply constraint."
+            data-zh="基于LM324的模拟前端，将0–3.5 A电流映射至0.25–3.3 V ADC范围，单电源（0–19 V）供电。">Analog front-end using LM324 to map 0&ndash;3.5 A current to 0.25&ndash;3.3 V ADC range under a 0&ndash;19 V single-supply constraint.</li>
+        <li data-en="Third-order Chebyshev low-pass filter (1 kHz cutoff, &ge; 35 dB attenuation at 5 kHz) designed in LTspice; validated DC gain and frequency response."
+            data-zh="三阶Chebyshev低通滤波器（截止频率1 kHz，5 kHz处衰减≥35 dB），在LTspice中设计并验证直流增益与频率响应。">Third-order Chebyshev low-pass filter (1 kHz cutoff, &ge; 35 dB attenuation at 5 kHz) designed in LTspice; validated DC gain and frequency response.</li>
+        <li data-en="Layout in Eagle with careful power/ground return routing; generated Gerber/drill files and hand-soldered prototype for validation."
+            data-zh="使用Eagle进行PCB布线，注重电源/地线回流路径；生成Gerber/钻孔文件，手工焊接原型并完成验证。">Layout in Eagle with careful power/ground return routing; generated Gerber/drill files and hand-soldered prototype for validation.</li>
       </ul>
       <div class="media gallery">
         <img src="assets/img/PCB/Screenshot%202026-02-26%20201752.png" alt="PCB schematic" />
@@ -112,16 +161,26 @@
       </div>
     </section>
 
+    <!-- ── CNC ── -->
     <section id="cnc" class="card">
-      <h1>CNC Mill Design Project</h1>
-      <p class="muted">Mechanical Engineering Design &bull; Sep&ndash;Dec 2024</p>
-      <p>Designed a desktop CNC mill targeting hobbyists, balancing cost, rigidity, and ease of manufacture. The project delivered full 3D CAD models, component selection rationale, and a detailed cost&ndash;performance analysis.</p>
+      <h1 data-en="CNC Mill Design Project"
+          data-zh="桌面数控铣床设计">CNC Mill Design Project</h1>
+      <p class="muted"
+         data-en="Mechanical Engineering Design &bull; Sep&ndash;Dec 2024"
+         data-zh="机械工程设计 &bull; 2024年9月–12月">Mechanical Engineering Design &bull; Sep&ndash;Dec 2024</p>
+      <p data-en="Designed a desktop CNC mill targeting hobbyists, balancing cost, rigidity, and ease of manufacture. The project delivered full 3D CAD models, component selection rationale, and a detailed cost&ndash;performance analysis."
+         data-zh="面向爱好者市场设计桌面数控铣床，兼顾成本、刚性与可制造性，交付完整三维CAD模型、元器件选型依据及详细成本性能分析。">Designed a desktop CNC mill targeting hobbyists, balancing cost, rigidity, and ease of manufacture. The project delivered full 3D CAD models, component selection rationale, and a detailed cost&ndash;performance analysis.</p>
       <ul>
-        <li>Developed detailed 3D models of frame, linear axes, spindle assembly, and transmission in SolidWorks.</li>
-        <li>Performed trade studies on drive options (stepper vs servo), linear guide types, and material choices to optimise accuracy per dollar.</li>
-        <li>Documented fabrication processes, estimated BOM cost, and identified manufacturing challenges for a market-ready design.</li>
+        <li data-en="Developed detailed 3D models of frame, linear axes, spindle assembly, and transmission in SolidWorks."
+            data-zh="在SolidWorks中建立框架、线性轴、主轴组件及传动系统的详细三维模型。">Developed detailed 3D models of frame, linear axes, spindle assembly, and transmission in SolidWorks.</li>
+        <li data-en="Performed trade studies on drive options (stepper vs servo), linear guide types, and material choices to optimise accuracy per dollar."
+            data-zh="对驱动方案（步进电机vs伺服电机）、直线导轨类型及材料进行对比研究，优化单位成本下的精度。">Performed trade studies on drive options (stepper vs servo), linear guide types, and material choices to optimise accuracy per dollar.</li>
+        <li data-en="Documented fabrication processes, estimated BOM cost, and identified manufacturing challenges for a market-ready design."
+            data-zh="记录制造工艺，估算BOM成本，并针对市场化设计识别关键制造挑战。">Documented fabrication processes, estimated BOM cost, and identified manufacturing challenges for a market-ready design.</li>
       </ul>
-      <p><a class="textlink" href="assets/pdf/MIE243 Final Report .pdf" target="_blank" rel="noopener">View project final report &rarr;</a></p>
+      <p><a class="textlink" href="assets/pdf/MIE243 Final Report .pdf" target="_blank" rel="noopener"
+            data-en="View project final report &rarr;"
+            data-zh="查看项目完整报告 &rarr;">View project final report &rarr;</a></p>
       <div class="media gallery">
         <img src="assets/img/CNC/CNC%20CAD.png" alt="CNC CAD" />
         <img src="assets/img/CNC/Component%20selection.png" alt="Component selection" />
@@ -130,17 +189,26 @@
       </div>
     </section>
 
+    <!-- ── BAJA ── -->
     <section id="baja" class="card">
-      <h1>University of Toronto Baja Racing &mdash; SAE Baja</h1>
-      <p class="muted">Suspension Team &bull; Sep 2025&ndash;Present</p>
-      <p>Contributing member of a multidisciplinary engineering team re-establishing the University of Toronto Baja SAE racing program after six years of inactivity due to COVID-19. Working within the suspension sub-team to prepare an off-road buggy for the SAE Baja competition in June 2026.</p>
+      <h1 data-en="University of Toronto Baja Racing &mdash; SAE Baja"
+          data-zh="多伦多大学 Baja SAE 赛车队">University of Toronto Baja Racing &mdash; SAE Baja</h1>
+      <p class="muted"
+         data-en="Suspension Team &bull; Sep 2025&ndash;Present"
+         data-zh="悬挂系统组 &bull; 2025年9月至今">Suspension Team &bull; Sep 2025&ndash;Present</p>
+      <p data-en="Contributing member of a multidisciplinary engineering team re-establishing the University of Toronto Baja SAE racing program after six years of inactivity due to COVID-19. Working within the suspension sub-team to prepare an off-road buggy for the SAE Baja competition in June 2026."
+         data-zh="参与重建中断六年（受COVID-19影响）的多伦多大学Baja SAE赛车队，任悬挂子系统成员，为备战2026年6月SAE Baja越野赛做准备。">Contributing member of a multidisciplinary engineering team re-establishing the University of Toronto Baja SAE racing program after six years of inactivity due to COVID-19. Working within the suspension sub-team to prepare an off-road buggy for the SAE Baja competition in June 2026.</p>
 
-      <h3>What I do</h3>
+      <h3 data-en="What I do" data-zh="我的工作">What I do</h3>
       <ul>
-        <li>Perform hands-on fabrication including MIG/TIG welding and manual machining of suspension and chassis components to meet competition-ready tolerances.</li>
-        <li>Develop original CAD models in SolidWorks for custom suspension components and tubular frame assemblies, ensuring compatibility with SAE rule-set constraints.</li>
-        <li>Design around existing geometry from purchased off-the-shelf parts and components sourced from other university teams, integrating third-party hardware into the vehicle architecture.</li>
-        <li>Collaborate with cross-functional sub-teams (drivetrain, steering, frame) to maintain system-level packaging and interface alignment across all vehicle subsystems.</li>
+        <li data-en="Perform hands-on fabrication including MIG/TIG welding and manual machining of suspension and chassis components to meet competition-ready tolerances."
+            data-zh="承担MIG/TIG焊接及手动机加工，确保悬挂与底盘零件达到比赛精度要求。">Perform hands-on fabrication including MIG/TIG welding and manual machining of suspension and chassis components to meet competition-ready tolerances.</li>
+        <li data-en="Develop original CAD models in SolidWorks for custom suspension components and tubular frame assemblies, ensuring compatibility with SAE rule-set constraints."
+            data-zh="在SolidWorks中开发定制悬挂零件与管状车架组件的原创CAD模型，满足SAE规则约束。">Develop original CAD models in SolidWorks for custom suspension components and tubular frame assemblies, ensuring compatibility with SAE rule-set constraints.</li>
+        <li data-en="Design around existing geometry from purchased off-the-shelf parts and components sourced from other university teams, integrating third-party hardware into the vehicle architecture."
+            data-zh="围绕外购标准件及来自其他高校车队的零部件进行适配设计，将第三方硬件集成至整车架构。">Design around existing geometry from purchased off-the-shelf parts and components sourced from other university teams, integrating third-party hardware into the vehicle architecture.</li>
+        <li data-en="Collaborate with cross-functional sub-teams (drivetrain, steering, frame) to maintain system-level packaging and interface alignment across all vehicle subsystems."
+            data-zh="与各子系统（传动、转向、车架）跨职能协作，确保整车系统级布局与接口对齐。">Collaborate with cross-functional sub-teams (drivetrain, steering, frame) to maintain system-level packaging and interface alignment across all vehicle subsystems.</li>
       </ul>
 
       <div class="media gallery">
@@ -149,23 +217,37 @@
       </div>
     </section>
 
+    <!-- ── SCHINDLER ── -->
     <section id="schindler" class="card">
-      <h1>Engineering Internship &mdash; Schindler Group</h1>
-      <p class="muted">Shanghai &bull; Jul&ndash;Aug 2024</p>
-      <p>During a summer internship with Schindler's global R&amp;D team I assisted in structural analysis and prototyping for elevator components in an international setting.</p>
+      <h1 data-en="Engineering Internship &mdash; Schindler Group"
+          data-zh="工程实习 — 迅达集团">Engineering Internship &mdash; Schindler Group</h1>
+      <p class="muted"
+         data-en="Shanghai &bull; Jul&ndash;Aug 2024"
+         data-zh="上海 &bull; 2024年7月–8月">Shanghai &bull; Jul&ndash;Aug 2024</p>
+      <p data-en="During a summer internship with Schindler's global R&amp;D team I assisted in structural analysis and prototyping for elevator components in an international setting."
+         data-zh="在迅达集团全球R&amp;D团队实习期间，协助完成电梯结构件的有限元分析与原型制作，工作于国际化工程环境中。">During a summer internship with Schindler's global R&amp;D team I assisted in structural analysis and prototyping for elevator components in an international setting.</p>
       <ul>
-        <li>Parametric Creo modeling of &Omega;-Beam and L-Beam structural parts in collaboration with the worldwide R&amp;D group.</li>
-        <li>Finite element analysis performed according to FKM guidelines to verify strength under service loads.</li>
-        <li>Developed MATLAB ODE models to analyze system oscillations and compare with simulation results.</li>
-        <li>Produced 3D-printed prototypes for quick design iteration and evaluation on industrial printers.</li>
+        <li data-en="Parametric Creo modeling of &Omega;-Beam and L-Beam structural parts in collaboration with the worldwide R&amp;D group."
+            data-zh="与全球R&amp;D团队协作，在Creo中对Ω型梁和L型梁结构件进行参数化建模。">Parametric Creo modeling of &Omega;-Beam and L-Beam structural parts in collaboration with the worldwide R&amp;D group.</li>
+        <li data-en="Finite element analysis performed according to FKM guidelines to verify strength under service loads."
+            data-zh="按FKM规范完成有限元分析，验证各工况下的结构强度。">Finite element analysis performed according to FKM guidelines to verify strength under service loads.</li>
+        <li data-en="Developed MATLAB ODE models to analyze system oscillations and compare with simulation results."
+            data-zh="建立MATLAB ODE模型分析系统振荡特性，与仿真结果对标。">Developed MATLAB ODE models to analyze system oscillations and compare with simulation results.</li>
+        <li data-en="Produced 3D-printed prototypes for quick design iteration and evaluation on industrial printers."
+            data-zh="使用工业级打印机制作3D打印原型，支持快速设计迭代与评估。">Produced 3D-printed prototypes for quick design iteration and evaluation on industrial printers.</li>
       </ul>
     </section>
 
+    <!-- ── PUBLICATION ── -->
     <section id="publication" class="card">
-      <h1>Publication &mdash; Rocket Optimization</h1>
-      <p class="muted">Jun&ndash;Oct 2022</p>
+      <h1 data-en="Publication &mdash; Rocket Optimization"
+          data-zh="发表论文 — 火箭优化研究">Publication &mdash; Rocket Optimization</h1>
+      <p class="muted"
+         data-en="Jun&ndash;Oct 2022"
+         data-zh="2022年6月–10月">Jun&ndash;Oct 2022</p>
       <p>
-        "Applications of Optimization Techniques for Solid Rocket Design" (Darcy &amp; Roy Press).<br />
+        <span data-en="&ldquo;Applications of Optimization Techniques for Solid Rocket Design&rdquo; (Darcy &amp; Roy Press)."
+              data-zh="《固体火箭设计优化技术的应用》（Darcy &amp; Roy Press）。">&ldquo;Applications of Optimization Techniques for Solid Rocket Design&rdquo; (Darcy &amp; Roy Press).</span><br />
         DOI: <a class="textlink" href="https://doi.org/10.54097/hset.v38i.5936" target="_blank" rel="noopener">10.54097/hset.v38i.5936</a>
       </p>
     </section>
@@ -175,39 +257,55 @@
     <div class="muted">&copy; <span id="y"></span> Dario Serrano</div>
   </footer>
 
-  <!-- Expanded image overlay -->
   <div id="imageOverlay" class="image-overlay"></div>
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
 
-    // Make all images clickable to expand
-    document.querySelectorAll('.media img').forEach(img => {
-      img.addEventListener('click', function(e) {
+    // Image expand
+    document.querySelectorAll(".media img").forEach(function (img) {
+      img.addEventListener("click", function (e) {
         e.stopPropagation();
         expandImage(this);
       });
     });
 
     function expandImage(imgElement) {
-      const overlay = document.getElementById('imageOverlay');
-      overlay.innerHTML = `<img src="${imgElement.src}" alt="${imgElement.alt}" class="expanded-image" />`;
-      overlay.classList.add('active');
-
-      // Close on background click
-      overlay.addEventListener('click', function(e) {
-        if(e.target === overlay) {
-          overlay.classList.remove('active');
-        }
+      var overlay = document.getElementById("imageOverlay");
+      overlay.innerHTML = '<img src="' + imgElement.src + '" alt="' + imgElement.alt + '" class="expanded-image" />';
+      overlay.classList.add("active");
+      overlay.addEventListener("click", function (e) {
+        if (e.target === overlay) overlay.classList.remove("active");
       });
-
-      // Close on Escape
-      document.addEventListener('keydown', function(e) {
-        if(e.key === 'Escape' && overlay.classList.contains('active')) {
-          overlay.classList.remove('active');
-        }
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && overlay.classList.contains("active"))
+          overlay.classList.remove("active");
       });
     }
+
+    // Language toggle (shared logic with index.html)
+    (function () {
+      function applyLang(lang) {
+        document.documentElement.lang = lang;
+        document.querySelectorAll("[data-en]").forEach(function (el) {
+          var text = el.getAttribute("data-" + lang);
+          if (text !== null) el.innerHTML = text;
+        });
+        document.querySelectorAll("[data-href-en]").forEach(function (el) {
+          el.href = lang === "zh" ? el.getAttribute("data-href-zh") : el.getAttribute("data-href-en");
+        });
+        var btn = document.getElementById("lang-btn");
+        if (btn) btn.textContent = lang === "zh" ? "EN" : "中文";
+        localStorage.setItem("lang", lang);
+      }
+
+      window.toggleLang = function () {
+        applyLang(document.documentElement.lang === "zh" ? "en" : "zh");
+      };
+
+      var saved = localStorage.getItem("lang");
+      if (saved === "zh") applyLang("zh");
+    })();
   </script>
 </body>
 </html>

@@ -1,0 +1,169 @@
+% !TEX program = xelatex
+% ============================================================
+%  王东瑞（Dario Serrano）— 中文简历（具身智能方向）
+%  Chinese Resume — Embodied AI / Humanoid Robotics Focus
+%  Overleaf: Menu → Compiler → XeLaTeX, then Recompile
+% ============================================================
+
+\documentclass[a4paper,10pt]{article}
+
+% ---- CJK fonts (Noto Sans: compact, clean, good at small sizes) ----
+\usepackage{xeCJK}
+\setCJKmainfont[Scale=0.95]{Noto Sans CJK SC}
+\setCJKsansfont[Scale=0.95]{Noto Sans CJK SC}
+\setCJKmonofont[Scale=0.95]{Noto Sans CJK SC}
+\usepackage{fontspec}
+
+% ---- Tighten CJK↔Latin spacing ----
+\xeCJKsetup{CJKecglue={\hskip 0.12em plus 0.03em minus 0.03em}}
+
+\usepackage[top=1.15cm, bottom=1.15cm, left=1.55cm, right=1.55cm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{array}
+
+\hypersetup{colorlinks=true, urlcolor=black, linkcolor=black}
+
+% ---- Section headings ----
+\titleformat{\section}
+  {\normalsize\bfseries\sffamily}{}{0em}{}[\vspace{-3pt}\rule{\linewidth}{0.5pt}]
+\titlespacing{\section}{0pt}{7pt}{3pt}
+
+% ---- Spacing ----
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\linespread{1.0}
+
+% ---- Lists ----
+\setlist[itemize]{
+  leftmargin=1.5em,
+  itemsep=0.5pt,
+  parsep=0pt,
+  topsep=2pt,
+  label=\textbullet
+}
+
+% ---- Helpers ----
+\newcommand{\entry}[2]{\textbf{#1} \hfill \textit{#2}}
+\newcommand{\subline}[1]{\textit{\small #1}}
+
+\begin{document}
+\pagestyle{empty}
+
+% ================================================================
+%  HEADER
+% ================================================================
+\begin{center}
+  {\large\bfseries 王东瑞（Dario Serrano）}\\[3pt]
+  {\small
+    多伦多，加拿大 \enspace\textbar\enspace
+    +1 (416) 459-3669 \enspace\textbar\enspace
+    \href{mailto:dario.serrano@mail.utoronto.ca}{dario.serrano@mail.utoronto.ca}\\[1pt]
+    \href{https://linkedin.com/in/darioserrano1213}{linkedin.com/in/darioserrano1213}
+    \enspace\textbar\enspace
+    \href{https://lizmutt.github.io/darioserrano.github.io/}{个人作品集}
+  }\\[3pt]
+  {\small\bfseries
+    持有美国国籍及欧盟护照 \textbar\
+    可无签证障碍赴美、赴欧代表公司执行业务及对接海外合作方
+  }
+\end{center}
+
+\vspace{1pt}
+
+% ================================================================
+%  PROFILE
+% ================================================================
+\section{个人简介}
+
+在上海成长的华裔美国工程师，就读于多伦多大学机械工程专业（辅修机器人与机电一体化，预计2027年毕业）。
+\textbf{中英双母语}（普通话、沪语、英语），深度理解中西方技术生态，可无障碍对接两岸研究与工程资源。
+
+具备\textbf{机械硬件设计与AI算法}复合背景（SolidWorks/ANSYS/PCB设计 → PyTorch深度学习），
+研究方向聚焦\textbf{具身智能与机器人运动控制}。曾于迅达集团上海研发中心实习，已发表研究论文，
+正积极学习ROS2与MuJoCo以加速向具身AI方向过渡。
+
+% ================================================================
+%  EDUCATION
+% ================================================================
+\section{教育背景}
+
+\entry{多伦多大学（University of Toronto）}{2023--2027（预计）}\\
+理学学士（工程）| 机械工程 + PEY带薪实习合作项目\\
+辅修：机器人与机电一体化 \quad 证书：工程商业、AI工程\\
+校队：多大 Baja SAE 赛车队（悬挂系统）、多大方程式赛车队（底盘设计）\\
+高中荣誉：国际数学建模竞赛（IMMC）全球前3\%；Physics Bowl 全国金奖
+
+% ================================================================
+%  ENGINEERING EXPERIENCE
+% ================================================================
+\section{工程经历}
+
+\entry{工程实习生 — 迅达集团（Schindler Group）}{2024年7月--8月}\\
+\subline{上海，中国}
+\begin{itemize}
+  \item 参与全球R\&D团队，使用Creo Parametric对电梯承重结构件（Ω型梁、L型梁）建模，按FKM规范完成FEA验证。
+  \item 建立MATLAB ODE模型分析系统振荡特性；在工业级3D打印系统上制作升降方案原型，加速设计迭代。
+\end{itemize}
+
+\vspace{2pt}
+\entry{Baja SAE 赛车队 — 多伦多大学（悬挂系统）}{2025年9月至今}\\
+\subline{多伦多，加拿大}
+\begin{itemize}
+  \item 参与重建中断六年的多大Baja SAE车队，备战2026年SAE越野竞赛。
+  \item 负责MIG/TIG焊接及手动机加工；在SolidWorks中设计原创悬挂部件与车架组件。
+\end{itemize}
+
+\vspace{2pt}
+\entry{雌雄同构航天器对接机构 — 运动学与动力学分析}{2025年9月--12月}\\
+\subline{多伦多，加拿大}
+\begin{itemize}
+  \item 建立六臂可变角度粗对准机构的参数化SolidWorks模型。
+  \item 编写MATLAB运动学/静力学代码；通过Jacobian力映射求解所需滑块驱动力为2.17\,kN。
+\end{itemize}
+
+\vspace{2pt}
+\entry{电流检测与抗混叠PCB — 数模混合电路设计}{2026年1月--5月}\\
+\subline{多伦多，加拿大}
+\begin{itemize}
+  \item 设计模拟电流检测前端（LM324）及三阶Chebyshev LPF（截止频率1\,kHz，5\,kHz衰减≥35\,dB）；经LTspice验证。
+  \item 使用EAGLE完成双层PCB布线，生成Gerber文件，手工焊接并调试原型板。
+\end{itemize}
+
+% ================================================================
+%  AI & ANALYTICAL PROJECTS
+% ================================================================
+\section{AI与分析项目}
+
+\entry{基于CNN-LSTM的癫痫发作检测 — 深度学习应用}{2025年5月--9月}\\
+\subline{多伦多，加拿大}
+\begin{itemize}
+  \item 基于PyTorch搭建CNN-LSTM网络对CHB-MIT脑电数据集进行分类；实现Butterworth滤波、小波去噪及滑动窗口分割。
+  \item 在未见患者测试集上取得AUROC\,0.96、F1分数0.84，跨患者泛化能力优异。
+\end{itemize}
+
+\vspace{2pt}
+\entry{固体火箭设计优化技术研究（已发表）}{2022年6月--10月}\\
+\subline{远程（高中阶段独立研究）}
+\begin{itemize}
+  \item 发表论文《Applications of Optimization Techniques for Solid Rocket Design》
+    （Darcy \& Roy Press，DOI: 10.54097/hset.v38i.5936）。
+\end{itemize}
+
+% ================================================================
+%  TECHNICAL SKILLS
+% ================================================================
+\section{技术技能}
+
+\begin{tabular}{@{}p{2.4cm}p{\dimexpr\linewidth-2.4cm-2\tabcolsep\relax}}
+\textbf{设计与制造} & SolidWorks、Creo Parametric、ANSYS（FEA）、Eagle PCB、3D打印、手动机加工、MIG/TIG焊接\\[2pt]
+\textbf{编程与仿真} & Python、PyTorch、MATLAB、NumPy、pandas、SciPy、LTspice\\[2pt]
+\textbf{正在学习}   & ROS2、MuJoCo、Isaac Sim、强化学习（Sim-to-Real方向）\\[2pt]
+\textbf{语言能力}   & 中文（普通话母语、沪语母语）、英语（母语）
+\end{tabular}
+
+\vspace{5pt}
+{\small\itshape 推荐人：迅达集团亚太区前CEO Daryoush Ziai 先生，可提供书面推荐信。}
+
+\end{document}

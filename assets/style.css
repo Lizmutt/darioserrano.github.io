@@ -43,6 +43,24 @@ body{
 }
 .link:hover{color:var(--text); border-color:rgba(34,42,51,.9); background:rgba(18,22,27,.7);}
 
+.lang-toggle{
+  background: transparent;
+  border:1px solid rgba(77,163,255,.35);
+  color:var(--accent);
+  font-family: inherit;
+  font-weight:700;
+  font-size:.88rem;
+  padding:7px 13px;
+  border-radius:10px;
+  cursor:pointer;
+  letter-spacing:.04em;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+.lang-toggle:hover{
+  background: rgba(77,163,255,.1);
+  border-color:rgba(77,163,255,.65);
+}
+
 .card{
   background: linear-gradient(180deg, rgba(18,22,27,.96), rgba(18,22,27,.82));
   border:1px solid rgba(34,42,51,.85);
