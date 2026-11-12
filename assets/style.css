@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 :root{
   --bg:#fafaf7;
@@ -12,7 +12,7 @@
   --radius:0;
   --max:960px;
   --sans:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
 }
 
 *{box-sizing:border-box}
@@ -39,7 +39,7 @@ body{
   padding-top:14px;padding-bottom:14px;
 }
 .brand .name{font-weight:700;font-size:1.02rem}
-.brand .tag{font-family:var(--mono);font-size:.74rem;color:var(--muted)}
+.brand .tag{font-family:var(--mono);font-size:.76rem;font-weight:500;color:var(--muted)}
 .nav{display:flex;gap:4px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
 .link{
   color:var(--muted);text-decoration:none;font-weight:600;font-size:.9rem;
@@ -67,7 +67,7 @@ body{
 h1{font-size:1.4rem;font-weight:700;line-height:1.3;margin:0 0 6px;letter-spacing:-.01em}
 .hero h1{font-size:1.9rem;letter-spacing:-.015em;margin:0 0 10px}
 h2{
-  font-family:var(--mono);font-size:.76rem;font-weight:600;
+  font-family:var(--mono);font-size:.78rem;font-weight:600;
   text-transform:uppercase;letter-spacing:.14em;
   color:var(--muted);margin:0 0 12px;
 }
@@ -98,17 +98,17 @@ li::marker{color:var(--line-strong)}
 .btn.ghost:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
 .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
 .pill{
-  font-family:var(--mono);font-size:.76rem;color:var(--muted);
+  font-family:var(--mono);font-size:.78rem;font-weight:500;color:var(--muted);
   border:1px solid var(--line);
   padding:4px 11px;background:var(--surface);
 }
 
 /* ── Skills ── */
 .skill-row{display:flex;gap:14px;align-items:baseline;margin:12px 0}
-.skill-cat{font-family:var(--mono);font-size:.76rem;color:var(--muted);flex:0 0 170px}
+.skill-cat{font-family:var(--mono);font-size:.78rem;font-weight:500;color:var(--muted);flex:0 0 170px}
 .skill-grid{display:flex;flex-wrap:wrap;gap:7px}
 .skill-tag{
-  font-family:var(--mono);font-size:.78rem;color:var(--text);
+  font-family:var(--mono);font-size:.8rem;font-weight:500;color:var(--text);
   border:1px solid var(--line);
   padding:3px 9px;background:var(--bg);
 }
@@ -128,7 +128,7 @@ li::marker{color:var(--line-strong)}
 }
 .pub-list li:first-child::before{top:4px}
 .pub-status{
-  font-family:var(--mono);font-size:.7rem;color:var(--muted);
+  font-family:var(--mono);font-size:.73rem;font-weight:500;color:var(--muted);
   border:1px solid var(--line-strong);
   padding:2px 8px;margin-left:8px;white-space:nowrap;
 }
@@ -159,7 +159,7 @@ li::marker{color:var(--line-strong)}
 .media .placeholder{
   border:1px dashed var(--line-strong);
   padding:18px;background:var(--bg);
-  font-family:var(--mono);font-size:.8rem;color:var(--muted);
+  font-family:var(--mono);font-size:.8rem;font-weight:500;color:var(--muted);
 }
 
 .project-nav{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}
@@ -184,7 +184,32 @@ li::marker{color:var(--line-strong)}
   display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
   border-top:1px solid var(--line);margin-top:26px;
   padding-top:18px;padding-bottom:34px;
-  font-family:var(--mono);font-size:.78rem;
+  font-family:var(--mono);font-size:.8rem;font-weight:500;
+}
+
+/* ── Print / PDF portfolio ──
+   scripts/build_portfolio_pdf.sh renders projects.html through these rules into
+   assets/pdf/Dario_Serrano_Portfolio_2027.pdf. Rerun it after content changes. */
+.print-only{display:none}
+@media print{
+  @page{size:Letter;margin:16mm 16mm 18mm}
+  body{background:#fff;color:#111;font-size:10.5pt;line-height:1.5;padding:0}
+  .header,.footer,.project-nav,.lang-toggle,.media .placeholder,a[href^="assets/"]{display:none}
+  .wrap{max-width:none;padding:0}
+  .card{border:none;padding:0;margin:0 0 14pt}
+  main>section.card{break-before:page}
+  main>section.card:first-of-type{break-before:auto}
+  h1{font-size:15pt;margin-bottom:2pt}
+  h3{margin-top:10pt}
+  h2,.muted{color:#333}
+  .two{display:block}
+  .media.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8pt;margin-top:10pt}
+  .media img,.media.gallery img{height:auto;max-height:70mm;max-width:100%;object-fit:contain;border:1px solid #ddd;break-inside:avoid}
+  a{color:#111;text-decoration:none}
+  a[href^="https"]::after{content:" — " attr(href);font-size:8pt;color:#555}
+  .print-only{display:block;margin:0 0 18pt}
+  .print-only .pt-name{font-size:22pt;font-weight:700;letter-spacing:-.01em;margin:0 0 4pt}
+  .print-only p{margin:0;color:#333;font-size:10pt}
 }
 
 @media (max-width:700px){

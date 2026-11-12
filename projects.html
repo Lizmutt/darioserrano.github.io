@@ -32,12 +32,23 @@
          data-href-zh="assets/pdf/Dario_Serrano_Resume_CHINESE_0315.pdf"
          data-en="Resume" data-zh="简历"
          target="_blank" rel="noopener">Resume</a>
+      <a class="link" href="assets/pdf/Dario_Serrano_Portfolio_2027.pdf"
+         data-en="Portfolio (PDF)" data-zh="作品集（PDF）"
+         target="_blank" rel="noopener">Portfolio (PDF)</a>
       <a class="link" href="https://linkedin.com/in/darioserrano1213" target="_blank" rel="noopener">LinkedIn</a>
       <button class="lang-toggle" id="lang-btn" onclick="toggleLang()">中文</button>
     </nav>
   </header>
 
   <main class="wrap">
+    <!-- Visible only in the printed/PDF portfolio, which scripts/build_portfolio_pdf.sh
+         generates from this page via the @media print styles. English-only on purpose. -->
+    <div class="print-only">
+      <p class="pt-name">Dario Serrano &mdash; Project Portfolio</p>
+      <p>Mechanical Engineering (Robotics &amp; Mechatronics minor), University of Toronto &mdash; graduating June 2027</p>
+      <p>dario.serrano@mail.utoronto.ca &bull; linkedin.com/in/darioserrano1213 &bull; lizmutt.github.io/darioserrano.github.io</p>
+    </div>
+
     <nav class="project-nav">
       <a class="pill" href="#hopto"
          data-en="HopTo Robotics" data-zh="眺月科技">HopTo Robotics</a>
@@ -123,13 +134,8 @@
           </ul>
         </div>
 
-        <!-- IMAGES: add files to assets/img/climb/, then replace the placeholder div
-             with this line, using the real filename.
-             Mocap room shots, test flights, plots are all fine.
-             Keep the vehicle's novel configuration out of frame until submission.
-             <img src="assets/img/climb/FILENAME.jpg" alt="Motion-capture flight testing" /> -->
         <div class="media gallery">
-          <div class="placeholder" data-en="Images coming soon" data-zh="图片即将更新">Images coming soon</div>
+          <img src="assets/img/climb/ch5fig5_composite_annotated.jpg" alt="High-speed composite of a water-surface hopping experiment in the motion-capture facility, annotated with millisecond timestamps" />
         </div>
       </div>
     </section>
