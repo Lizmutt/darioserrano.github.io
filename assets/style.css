@@ -192,24 +192,33 @@ li::marker{color:var(--line-strong)}
    assets/pdf/Dario_Serrano_Portfolio_2027.pdf. Rerun it after content changes. */
 .print-only{display:none}
 @media print{
-  @page{size:Letter;margin:16mm 16mm 18mm}
-  body{background:#fff;color:#111;font-size:10.5pt;line-height:1.5;padding:0}
+  @page{size:Letter;margin:12mm 14mm 14mm}
+  html{background:var(--bg)}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:var(--bg);color:var(--text);font-size:9.5pt;line-height:1.55;padding:0}
   .header,.footer,.project-nav,.lang-toggle,.media .placeholder,a[href^="assets/"]{display:none}
-  .wrap{max-width:none;padding:0}
-  .card{border:none;padding:0;margin:0 0 14pt}
+  .wrap{max-width:174mm;margin:0 auto;padding:0}
+  section.card{background:var(--surface);border:1px solid var(--line);padding:7mm 8mm;margin:0}
   main>section.card{break-before:page}
   main>section.card:first-of-type{break-before:auto}
-  h1{font-size:15pt;margin-bottom:2pt}
-  h3{margin-top:10pt}
-  h2,.muted{color:#333}
+  .print-only{display:block;background:var(--surface);border:1px solid var(--line);text-align:center;padding:5mm 9mm;margin:0 0 5mm}
+  .print-only .pt-name{font-family:var(--sans);font-size:20pt;font-weight:700;letter-spacing:-.015em;margin:0 0 4pt}
+  .print-only p{margin:0;font-family:var(--mono);font-size:8pt;color:var(--muted)}
+  h1{font-size:14pt;margin:0 0 3pt;letter-spacing:-.01em}
+  .card p.muted{font-family:var(--mono);font-size:7.5pt;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  h3{font-family:var(--mono);font-size:7.5pt;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:9pt 0 3pt}
+  p{margin:0 0 6pt}
+  ul{margin:3pt 0 7pt;padding-left:13pt}
+  li{margin:2.5pt 0}
+  li::marker{color:var(--line-strong)}
+  a{color:var(--text);text-decoration:none}
+  a[href^="https"]{color:var(--accent)}
+  a[href^="https"]::after{content:" — " attr(href);font-family:var(--mono);font-size:7pt;color:var(--muted)}
   .two{display:block}
-  .media.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8pt;margin-top:10pt}
-  .media img,.media.gallery img{height:auto;max-height:70mm;max-width:100%;object-fit:contain;border:1px solid #ddd;break-inside:avoid}
-  a{color:#111;text-decoration:none}
-  a[href^="https"]::after{content:" — " attr(href);font-size:8pt;color:#555}
-  .print-only{display:block;margin:0 0 18pt}
-  .print-only .pt-name{font-size:22pt;font-weight:700;letter-spacing:-.01em;margin:0 0 4pt}
-  .print-only p{margin:0;color:#333;font-size:10pt}
+  .media.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:4mm;margin-top:5mm}
+  .media.gallery:has(img:nth-child(5)){grid-template-columns:repeat(3,1fr)}
+  .media img,.media.gallery img{width:100%;height:36mm;max-width:none;max-height:none;object-fit:contain;background:var(--bg);border:1px solid var(--line);break-inside:avoid}
+  .media.gallery:has(img:nth-child(5)) img{height:31mm}
 }
 
 @media (max-width:700px){
