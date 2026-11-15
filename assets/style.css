@@ -215,10 +215,14 @@ li::marker{color:var(--line-strong)}
   a,.textlink,a.textlink{color:#000;text-decoration:none;font-weight:inherit}
   a[href^="https"]::after{content:" (" attr(href) ")";font-size:8pt;color:#222}
   .two{display:block}
-  .media.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:4mm;margin-top:6mm}
-  .media.gallery:has(img:nth-child(5)){grid-template-columns:repeat(3,1fr)}
-  .media img,.media.gallery img{width:100%;height:36mm;max-width:none;max-height:none;object-fit:contain;background:#fff;border:.5pt solid #555;padding:1.5mm;break-inside:avoid}
-  .media.gallery:has(img:nth-child(5)) img{height:31mm}
+  /* Images: frameless, centered, natural aspect ratio. Both max constraints
+     apply together, so portraits keep height and landscapes keep width. */
+  .media.gallery{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:4mm 5mm;margin-top:6mm}
+  .media img,.media.gallery img{width:auto;height:auto;max-width:72mm;max-height:50mm;object-fit:unset;background:none;border:none;padding:0;break-inside:avoid}
+  .media.gallery:has(img:nth-child(5)) img{max-width:56mm;max-height:36mm}
+  /* The one-paragraph publication section shares Schindler's page instead of
+     sitting alone on a nearly empty one. */
+  main>section#publication{break-before:auto;margin-top:16pt}
 }
 
 @media (max-width:700px){
