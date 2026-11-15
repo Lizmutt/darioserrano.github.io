@@ -192,32 +192,32 @@ li::marker{color:var(--line-strong)}
    assets/pdf/Dario_Serrano_Portfolio_2027.pdf. Rerun it after content changes. */
 .print-only{display:none}
 @media print{
-  @page{size:Letter;margin:12mm 14mm 14mm}
-  html{background:var(--bg)}
-  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  body{background:var(--bg);color:var(--text);font-size:9.5pt;line-height:1.55;padding:0}
+  /* Resume-matched: Times, black on white, hairline section rules, dates and
+     figures treated the way the LaTeX resume treats them. */
+  @page{size:Letter;margin:14mm 16mm 16mm}
+  body{background:#fff;color:#000;font-family:"Times New Roman",Times,"Liberation Serif",serif;font-size:10.5pt;line-height:1.38;padding:0}
   .header,.footer,.project-nav,.lang-toggle,.media .placeholder,a[href^="assets/"]{display:none}
-  .wrap{max-width:174mm;margin:0 auto;padding:0}
-  section.card{background:var(--surface);border:1px solid var(--line);padding:7mm 8mm;margin:0}
+  .wrap{max-width:180mm;margin:0 auto;padding:0}
+  .card{background:none;border:none;padding:0;margin:0}
   main>section.card{break-before:page}
   main>section.card:first-of-type{break-before:auto}
-  .print-only{display:block;background:var(--surface);border:1px solid var(--line);text-align:center;padding:5mm 9mm;margin:0 0 5mm}
-  .print-only .pt-name{font-family:var(--sans);font-size:20pt;font-weight:700;letter-spacing:-.015em;margin:0 0 4pt}
-  .print-only p{margin:0;font-family:var(--mono);font-size:8pt;color:var(--muted)}
-  h1{font-size:14pt;margin:0 0 3pt;letter-spacing:-.01em}
-  .card p.muted{font-family:var(--mono);font-size:7.5pt;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-  h3{font-family:var(--mono);font-size:7.5pt;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:9pt 0 3pt}
-  p{margin:0 0 6pt}
-  ul{margin:3pt 0 7pt;padding-left:13pt}
-  li{margin:2.5pt 0}
-  li::marker{color:var(--line-strong)}
-  a{color:var(--text);text-decoration:none}
-  a[href^="https"]{color:var(--accent)}
-  a[href^="https"]::after{content:" — " attr(href);font-family:var(--mono);font-size:7pt;color:var(--muted)}
+  .print-only{display:block;border-bottom:.9pt solid #000;padding:0 0 7pt;margin:0 0 9pt}
+  .print-only .pt-name{font-family:inherit;font-size:21pt;font-weight:700;margin:0 0 3pt}
+  .print-only p{margin:0;font-size:9.5pt;color:#000}
+  h1{font-size:13pt;font-weight:700;letter-spacing:0;margin:0;padding-bottom:2pt;border-bottom:.6pt solid #000}
+  .card p.muted{font-size:9.5pt;font-style:italic;color:#000;margin:3pt 0 7pt;font-family:inherit;letter-spacing:0;text-transform:none}
+  h3{font-family:inherit;font-size:10pt;font-weight:700;font-variant:small-caps;letter-spacing:.03em;text-transform:lowercase;color:#000;margin:8pt 0 2pt}
+  p{margin:0 0 5pt}
+  strong{font-weight:700}
+  ul{margin:2pt 0 6pt;padding-left:11pt}
+  li{margin:1.5pt 0;padding-left:2pt}
+  li::marker{content:"–  ";color:#000}
+  a,.textlink,a.textlink{color:#000;text-decoration:none;font-weight:inherit}
+  a[href^="https"]::after{content:" (" attr(href) ")";font-size:8pt;color:#222}
   .two{display:block}
-  .media.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:4mm;margin-top:5mm}
+  .media.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:4mm;margin-top:6mm}
   .media.gallery:has(img:nth-child(5)){grid-template-columns:repeat(3,1fr)}
-  .media img,.media.gallery img{width:100%;height:36mm;max-width:none;max-height:none;object-fit:contain;background:var(--bg);border:1px solid var(--line);break-inside:avoid}
+  .media img,.media.gallery img{width:100%;height:36mm;max-width:none;max-height:none;object-fit:contain;background:#fff;border:.5pt solid #555;padding:1.5mm;break-inside:avoid}
   .media.gallery:has(img:nth-child(5)) img{height:31mm}
 }
 
